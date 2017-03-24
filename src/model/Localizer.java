@@ -239,8 +239,8 @@ public class Localizer implements EstimatorInterface {
 
 	private double nothingSum(int x, int y) {
 		double negativeSum = 0;
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 5; j++) {
+		for (int i = 0; i < 6; i++) {
+			for (int j = 0; j < 6; j++) {
 				if (isNotOutOfBounds(y - 3 + i, x - 3 + j)) {
 					negativeSum += getOrXY(x - 3 + j, y - 3 + i, x, y);
 				}
@@ -309,7 +309,7 @@ public class Localizer implements EstimatorInterface {
 		f = vectMult(matrixMult(O, transpose(T)), f);
 		f = norm(f);
 	}
-	
+
 	private double[] norm(double[] vec) {
 		double sum = 0.0;
 		for (int i = 0; i < vec.length; i++) {
